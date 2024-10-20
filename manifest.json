@@ -7,7 +7,7 @@
 		"version": [
 			1,
 			0,
-			8
+			10
 		],
 		"min_engine_version": [
 			1,
@@ -47,7 +47,6 @@
 		  ],
 	"metadata": {
 		"authors": ["altivelis"],
-    "url": "https://twitter.com/altivelis1026?s=20&t=cXOW73Tvug2xUX4xijCrCw",
-    "license": "名前さえ記述してくれれば改造、改変OK"
+    "license": "この名前さえ残していれば改造、改変OK"
 	}
 }

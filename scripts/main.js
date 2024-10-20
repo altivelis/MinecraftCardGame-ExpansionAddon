@@ -23,6 +23,20 @@ mc.system.runInterval(() => {
       if(!item) continue;
       if(item.getLore().length > 0) continue;
       if(!cardList.find((element) => element.name.includes(item.typeId))) continue;
+      let remove = false;
+      for(let j=0; j<inv.size; j++){
+        const item2 = inv.getItem(j);
+        if(i == j) continue;
+        if(!item2) continue;
+        if(item2.getLore().length == 0) continue;
+        if(item2.typeId == item.typeId){
+          item2.amount += item.amount;
+          inv.setItem(j, item2);
+          inv.setItem(i);
+          remove = true;
+        }
+      }
+      if(remove) continue;
       item.setLore(cardInfo(item.typeId));
       inv.setItem(i, item);
     }

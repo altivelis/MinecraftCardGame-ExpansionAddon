@@ -545,6 +545,42 @@ export const cardList = [
       "§b使用時 / 自分のモブを1体除外してスロットを空けることができる。",
       "§bこの効果は除外無効のモブにも有効である。"
     ]
+  },
+  {
+    name:["minecraft:compass"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "-",
+    text: [
+      "§b使用時 / 自分のターンを終了する。"
+    ]
+  },
+  {
+    name:["minecraft:spyglass"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "-",
+    text: [
+      "遠くを見るための道具。"
+    ]
+  },
+  {
+    name:["minecraft:grass"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "-",
+    text: [
+      "§bドローするのに必要なアイテム。"
+    ]
+  },
+  {
+    name:["minecraft:wither_skeleton_skull"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "300",
+    text: [
+      "§b使用時 / ウィザーを召喚する。",
+      "§bあなたは勝利する。"
+    ]
   }
 ]
-//コンパス、望遠鏡、草ブロック、ウィザースケルトンの頭蓋骨、
