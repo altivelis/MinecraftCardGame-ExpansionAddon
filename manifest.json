@@ -1,0 +1,53 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "MCG-ExpansionAddon1.0.8",
+		"description": "MinecraftCardGameをやりやすくするための拡張アドオンを勝手に作りました。",
+		"uuid": "ca1f8455-73ea-4500-b57b-0faf1e1fb012",
+		"version": [
+			1,
+			0,
+			8
+		],
+		"min_engine_version": [
+			1,
+			20,
+			40
+		]
+	},
+	"modules": [
+		{
+			"type":"data",
+			"description":"behavior_module",
+			"version":[
+				1,
+				0,
+				0
+			],
+			"uuid":"5ef94aa0-2f14-432e-9ef4-610099878487"
+		},
+		{
+			"description": "Script API module",
+			"language": "javascript",
+			"type": "script",
+			"uuid": "280347e4-98cd-49a3-85d5-e4b626da83d1",
+			"version": [
+				0,
+				0,
+				1
+			],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.14.0"
+		  }
+		  ],
+	"metadata": {
+		"authors": ["altivelis"],
+    "url": "https://twitter.com/altivelis1026?s=20&t=cXOW73Tvug2xUX4xijCrCw",
+    "license": "名前さえ記述してくれれば改造、改変OK"
+	}
+}
