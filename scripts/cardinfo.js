@@ -30,7 +30,8 @@ export const cardList = [
     attribute: "アイテム",
     Cact: "3",
     text: [
-      "§b使用時 / 「木の剣、木のツルハシ、ニンジン付きの棒」を獲得する。"
+      "§b使用時 / 「木の剣、木のツルハシ、ニンジン付きの棒」を獲得する。",
+      "§6オブジェクト効果 / 自分の番開始時に草ブロックを1つ入手する。"
     ]
   },
   {
@@ -126,7 +127,8 @@ export const cardList = [
     Sact: "4",
     Bact: "3",
     text: [
-      "§bターン経過時効果 / 相手のモブ全員(浮遊、ガードを除く)に5ダメージを与える。"
+      "§bターン経過時効果 / 相手のモブ全員(浮遊、ガードを除く)に5ダメージを与える。",
+      "§b相手のオブジェクトを破壊する。"
     ]
   },
   {
@@ -148,7 +150,8 @@ export const cardList = [
     attribute: "アイテム",
     Cact: "8",
     text: [
-      "§b使用時 / 「ハスク」、「ストレイ」、「洞窟グモ」を獲得する。"
+      "§b使用時 / 「ハスク」、「ストレイ」、「洞窟グモ」を獲得する。",
+      "§6オブジェクト効果 / 自分のターン開始時、自分のactを20増やす。"
     ]
   },
   {
@@ -184,7 +187,8 @@ export const cardList = [
       "§b「エンチャントされた金のリンゴ」",
       "§b「ストレイ」x2",
       "§b「ハスク」x2",
-      "§b「ファントム」x2"
+      "§b「ファントム」x2",
+      "§6オブジェクト効果 / ターン開始時に草ブロックを3つ入手する。"
     ]
   },
   {
@@ -581,6 +585,376 @@ export const cardList = [
     text: [
       "§b使用時 / ウィザーを召喚する。",
       "§bウィザーの召喚に成功したとき、あなたは勝利する。"
+    ]
+  },
+  {
+    name:["minecraft:chicken", "minecraft:chicken_spawn_egg"],
+    type: "entity",
+    attribute: "なし",
+    hp: "4",
+    atk: "0",
+    Sact: "2",
+    Bact: "21",
+    text: [
+      "§bターン経過時効果 / 卵を獲得"
+    ]
+  },
+  {
+    name:["minecraft:parrot", "minecraft:parrot_spawn_egg"],
+    type: "entity",
+    attribute: "浮遊",
+    hp: "6",
+    atk: "0",
+    Sact: "4",
+    Bact: "5",
+    text: [
+      "§b召喚時効果 / 草ブロックを2つ入手する。",
+      "§bポピー、タンポポ、桃色のチューリップ、",
+      "§bサボテンの中からランダムに1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:bee_nest"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "3",
+    text: [
+      "§b使用時 / 「ハチのスポーンエッグ」を2枚手札に加える。",
+      "§6オブジェクト効果 / 毎ターン開始時に「ハチのスポーンエッグ」を1枚手札に加える。",
+      "§6このオブジェクトがなくなったとき、手札にある「ハチミツ入りの瓶」をすべて消費して",
+      "§6その数x10act入手する。",
+      "§6さらに、自分の場にハチがいるときにこの効果を使える。",
+      "§6「ポピー」「桃色のチューリップ」「タンポポ」を使用すると「ハチミツ入りの瓶」を1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:composter"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "3",
+    text: [
+      "§b使用時 / 「木のツルハシ」と「木のクワ」、「ニンジン付きの棒」を1枚ずつ入手する。",
+      "§6オブジェクト効果 / ターン開始時に「ポピー」「タンポポ」「桃色のチューリップ」",
+      "§6「サボテン」からランダムに1枚入手する。"
+    ]
+  },
+  {
+    name:["minecraft:fox", "minecraft:fox_spawn_egg"],
+    type: "entity",
+    attribute: "速攻",
+    hp: "34",
+    atk: "30",
+    Sact: "25",
+    Bact: "12",
+    text: [
+      "§b召喚時効果 / 自分の場にあるオブジェクトと同じカードを1枚入手する。"
+    ]
+  },
+  {
+    name:["minecraft:frog", "minecraft:frog_spawn_egg"],
+    type: "entity",
+    attribute: "なし",
+    hp: "10",
+    atk: "0",
+    Sact: "20",
+    Bact: "1",
+    text: [
+      "§b召喚時効果 / 相手の場にオブジェクトがある時、相手のオブジェクトを破壊して",
+      "§b自分と同じレーンのモブを除外する。"
+    ]
+  },
+  {
+    name:["minecraft:mooshroom", "minecraft:mooshroom_spawn_egg"],
+    type: "entity",
+    attribute: "なし",
+    hp: "82",
+    atk: "15",
+    Sact: "30",
+    Bact: "14",
+    text: [
+      "§b除外無効",
+      "§b召喚時効果 / 「赤いキノコ」を入手する。"
+    ]
+  },
+  {
+    name:["minecraft:polar_bear", "minecraft:polar_bear_spawn_egg"],
+    type: "entity",
+    attribute: "なし",
+    hp: "130",
+    atk: "50",
+    Sact: "55",
+    Bact: "8",
+    text: [
+      "§bターン終了時効果 / 相手プレイヤーの手札に「氷塊」を4枚加える。",
+      "§b自分の場にスノーゴレームがいるなら、追加で4枚相手プレイヤーに押し付けることができる。",
+      "§bこの追加で「氷塊」を押し付ける効果はホッキョクグマ、スノーゴーレムが複数体いても重ならない。"
+    ]
+  },
+  {
+    name:["minecraft:egg"],
+    type: "item",
+    attribute: "アイテム・合成素材",
+    Cact: "0",
+    text: [
+      "§b使用時 / 自分のHPを3回復する。",
+      "§b+小麦+ミルクバケツ = ケーキ"
+    ]
+  },
+  {
+    name:["minecraft:poppy", "minecraft:red_flower"],
+    type: "item",
+    attribute: "合成素材",
+    Cact: "-",
+    text: [
+      "§b+白い羊毛 = 赤い羊毛"
+    ]
+  },
+  {
+    name:["minecraft:dandelion", "minecraft:yellow_flower"],
+    type: "item",
+    attribute: "合成素材",
+    Cact: "-",
+    text: [
+      "§b+白い羊毛 = 黄色い羊毛"
+    ]
+  },
+  {
+    name:["minecraft:pink_tulip"],
+    type: "item",
+    attribute: "合成素材",
+    Cact: "-",
+    text: [
+      "§b+白い羊毛 = 桃色の羊毛"
+    ]
+  },
+  {
+    name:["minecraft:cactus"],
+    type: "item",
+    attribute: "アイテム・合成素材",
+    Cact: "0",
+    text: [
+      "§b使用時 / 相手のモブ全員に5ダメージを与える。(浮遊、ガードを除く)",
+      "§b+白い羊毛 = 緑色の羊毛"
+    ]
+  },
+  {
+    name:["minecraft:bee", "minecraft:bee_spawn_egg"],
+    type: "entity",
+    attribute: "浮遊・速攻",
+    hp: "10",
+    atk: "15",
+    Sact: "4",
+    Bact: "8",
+    text: [
+      "§b召喚時効果 / 自分のオブジェクトにミツバチの巣があるなら",
+      "§b「ハチミツ入りの瓶」を1つ入手する。",
+    ]
+  },
+  {
+    name:["minecraft:honey_bottle"],
+    type: "item",
+    attribute: "キープアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§b自分の「ミツバチの巣」がなくなると自動的に消費され、",
+      "§b1つにつき10actと交換される。"
+    ]
+  },
+  {
+    name:["minecraft:wooden_hoe"],
+    type: "item",
+    attribute: "アイテム・合成素材",
+    Cact: "0",
+    text: [
+      "§b使用時 / 「小麦」を1つ入手する。",
+      "§b+丸石 = 石のクワ",
+      "§b+鉄インゴット = 鉄のクワ"
+    ]
+  },
+  {
+    name:["minecraft:stone_hoe"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "0",
+    text: [
+      "§b使用時 / 「小麦」を1つ入手する。",
+      "§b「草ブロック」を1つ入手する。",
+      "§b「ポピー」「タンポポ」「桃色のチューリップ」「サボテン」の中からランダムに1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:iron_hoe"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "0",
+    text: [
+      "§b使用時 / 「小麦」を2つ入手する。",
+      "§b「草ブロック」を3つ入手する。",
+      "§b「ポピー」「タンポポ」「桃色のチューリップ」「サボテン」の中からランダムに2つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:wheat"],
+    type: "item",
+    attribute: "アイテム・合成素材",
+    Cact: "0",
+    text: [
+      "§b使用時 / 「ウシのスポーンエッグ」「羊のスポーンエッグ」を1つずつ入手する。",
+      "§b+石炭 = パン",
+      "§b+卵+ミルクバケツ = ケーキ"
+    ]
+  },
+  {
+    name:["minecraft:red_mushroom"],
+    type: "item",
+    attribute: "合成素材",
+    Cact: "-",
+    text: [
+      "§b+スケルトンのスポーンエッグ = ボグドのスポーンエッグ",
+      "§b+ウシのスポーンエッグ = ムーシュルームのスポーンエッグ"
+    ]
+  },
+  {
+    name:["minecraft:packed_ice"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "10",
+    text: [
+      "§bこのカードを使用すると10act消費する。",
+      "§bドローするか攻撃すると自動的に1つずつ消滅する。",
+      "§bこのカードを持っている限りピンク色の感圧板を使用できない。",
+      "§b自分のターン終了時にこのカードを持っていると1つにつき1ダメージ受ける。"
+    ]
+  },
+  {
+    name:["minecraft:bread"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "0",
+    text: [
+      "§b使用時 / 自分プレイヤーのHPを5回復する。"
+    ]
+  },
+  {
+    name:["minecraft:cake"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "0",
+    text: [
+      "§b使用時 / 自分プレイヤーのHPを13回復して「チェスト」を1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:sheep", "minecraft:sheep_spawn_egg"],
+    type: "entity",
+    attribute: "なし",
+    hp: "32",
+    atk: "0",
+    Sact: "5",
+    Bact: "5",
+    text: [
+      "§b召喚時効果 / 「白い羊毛」を1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:cow", "minecraft:cow_spawn_egg"],
+    type: "entity",
+    attribute: "なし、合成素材",
+    hp: "62",
+    atk: "15",
+    Sact: "10",
+    Bact: "2",
+    text: [
+      "§b召喚時効果 / 「ミルクバケツ」を1つ入手する。",
+      "§b+赤いキノコ = ムーシュルームのスポーンエッグ"
+    ]
+  },
+  {
+    name:["minecraft:white_wool"],
+    type: "item",
+    attribute: "合成素材",
+    Cact: "-",
+    text: [
+      "§b各色の花・サボテンと合成できる。",
+      "§b+ポピー = 赤色の羊毛",
+      "§b+タンポポ = 黄色の羊毛",
+      "§b+桃色のリューリップ = 桃色の羊毛",
+      "§b+サボテン = 緑色の羊毛",
+      "§b+ウィザーローズ = 黒色の羊毛"
+    ]
+  },
+  {
+    name:["minecraft:red_wool"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§bこのカードを所持しているプレイヤーは[§cATK§b:15]を得る。"
+    ]
+  },
+  {
+    name:["minecraft:yellow_wool"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§bこのカードを所持しているプレイヤーはターン開始時10act入手する。"
+    ]
+  },
+  {
+    name:["minecraft:pink_wool"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§bこのカードを所持しているプレイヤーはターン開始時に草ブロックを1つ入手する。"
+    ]
+  },
+  {
+    name:["minecraft:green_wool"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§bこのカードを所持しているプレイヤーはターン開始時に自分のHPを3回復する。"
+    ]
+  },
+  {
+    name:["minecraft:black_wool"],
+    type: "item",
+    attribute: "ハンドアイテム",
+    Cact: "-",
+    text: [
+      "§bこのカードは使用できない。",
+      "§bこのカードを所持しているプレイヤーはターン開始時に相手プレイヤーに1ダメージを与える。"
+    ]
+  },
+  {
+    name:["minecraft:milk_bucket"],
+    type: "item",
+    attribute: "アイテム・合成素材",
+    Cact: "0",
+    text: [
+      "§b使用時 / 自分の任意のモブ(浮遊を除く)にガード属性を付与する。",
+      "§b+卵+小麦 = ケーキ"
+    ]
+  },
+  {
+    name:["minecraft:bogged", "minecraft:bogged_spawn_egg"],
+    type: "entity",
+    attribute: "速攻・貫通",
+    hp: "16",
+    atk: "-",
+    Sact: "25",
+    Bact: "10",
+    text: [
+      "§b召喚時効果 / 自分の場にオブジェクトがあると矢を3つ入手する。",
+      "§bターン経過時効果 / 矢を1つ入手する。"
     ]
   }
 ]
