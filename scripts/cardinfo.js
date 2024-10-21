@@ -561,11 +561,11 @@ export const cardList = [
     attribute: "アイテム",
     Cact: "-",
     text: [
-      "遠くを見るための道具。"
+      "§b遠くを見るための道具。"
     ]
   },
   {
-    name:["minecraft:grass"],
+    name:["minecraft:grass_block"],
     type: "item",
     attribute: "アイテム",
     Cact: "-",
@@ -580,7 +580,7 @@ export const cardList = [
     Cact: "300",
     text: [
       "§b使用時 / ウィザーを召喚する。",
-      "§bあなたは勝利する。"
+      "§bウィザーの召喚に成功したとき、あなたは勝利する。"
     ]
   }
 ]

@@ -1,7 +1,7 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "MCG-ExpansionAddon1.0.8",
+		"name": "MCG-ExpansionAddon1.0.10",
 		"description": "MinecraftCardGameをやりやすくするための拡張アドオンを勝手に作りました。",
 		"uuid": "ca1f8455-73ea-4500-b57b-0faf1e1fb012",
 		"version": [
