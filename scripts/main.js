@@ -25,12 +25,22 @@ mc.system.runInterval(() => {
       if(!cardList.find((element) => element.name.includes(item.typeId))) continue;
       let remove = false;
       for(let j=0; j<inv.size; j++){
+        /**
+         * @type {mc.ItemStack | undefined}
+         */
         const item2 = inv.getItem(j);
         if(i == j) continue;
         if(!item2) continue;
         if(item2.getLore().length == 0) continue;
         if(item2.typeId == item.typeId){
-          item2.amount += item.amount;
+          let amount = item2.amount + item.amount;
+          if(amount > item2.maxAmount){
+            item2.amount = item2.maxAmount;
+            item.amount = amount - item2.maxAmount;
+            inv.setItem(j, item2);
+            continue;
+          }
+          item2.amount = amount;
           inv.setItem(j, item2);
           inv.setItem(i);
           remove = true;
