@@ -956,5 +956,14 @@ export const cardList = [
       "§b召喚時効果 / 自分の場にオブジェクトがあると矢を3つ入手する。",
       "§bターン経過時効果 / 矢を1つ入手する。"
     ]
+  },
+  {
+    name:["minecraft:potato"],
+    type: "item",
+    attribute: "アイテム",
+    Cact: "40",
+    text: [
+      "§b使用時 / なぜか「ブレイズ」を召喚できる。"
+    ]
   }
 ]
