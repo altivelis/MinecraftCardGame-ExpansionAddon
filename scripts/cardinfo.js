@@ -59,7 +59,7 @@ export const cardList = [
     name:["minecraft:bell"],
     type: "item",
     attribute: "アイテム",
-    Cact: "25",
+    Cact: "15",
     text: [
       "§bお互いの場のアンデッド系モブに即死ダメージを与える。(除外効果ではない)",
       "§bそれ以外のモブは全回復し、すべてのモブから除外無効効果をなくす。"
@@ -71,7 +71,7 @@ export const cardList = [
     attribute: "浮遊・速攻",
     hp: "20",
     atk: "50",
-    Sact: "40",
+    Sact: "45",
     Bact: "20",
     text: [
       "§bアレイがいる状態でドローするたびに4act獲得する。",
@@ -110,7 +110,7 @@ export const cardList = [
     attribute: "速攻・貫通",
     hp: "20",
     atk: "-",
-    Sact: "4",
+    Sact: "5",
     Bact: "3",
     text: [
       "§b召喚時効果 / 「矢」を1つ獲得する。",
@@ -137,7 +137,7 @@ export const cardList = [
     attribute: "なし",
     hp: "26",
     atk: "15",
-    Sact: "7",
+    Sact: "5",
     Bact: "11",
     text: [
       "§bターン経過時効果 / 自分を全回復する。",
@@ -181,7 +181,7 @@ export const cardList = [
     name:["minecraft:ender_chest"],
     type: "item",
     attribute: "アイテム",
-    Cact: "30",
+    Cact: "25",
     text: [
       "§b使用時 / 相手モブ全員に10ダメージを与え、次のカードからランダムで獲得する。",
       "§b「エンチャントされた金のリンゴ」",
@@ -200,9 +200,9 @@ export const cardList = [
       "§bこのカードは以下の条件下でしか使用できない。",
       "§b・相手のスロットがすべて埋まっている。",
       "§b・自分の場にモブがいない。",
-      "§b・相手のactが40以上",
+      "§b・相手のactが30以上",
       "§b・自分のactが10以下",
-      "§b使用時 / お互いのactを40にする。その代わりカードの使用者は8ダメージを受ける。",
+      "§b使用時 / 相手のactを30にし、自分のactを40にする。自分は8ダメージを受ける。",
       "§b草ブロックを3つ入手する。 相手の場のすべてのモブに20ダメージを与える。",
       "§bこのダメージは相手の属性の影響を受けない。"
     ]
@@ -234,7 +234,7 @@ export const cardList = [
     name:["minecraft:crying_obsidian"],
     type: "item",
     attribute: "アイテム",
-    Cact: "15",
+    Cact: "10",
     text: [
       "§b使用時 / 味方1体に除外無効効果を付与する。"
     ]
@@ -267,8 +267,8 @@ export const cardList = [
     attribute: "浮遊",
     hp: "20",
     atk: "30",
-    Sact: "40",
-    Bact: "20",
+    Sact: "30",
+    Bact: "15",
     text: [
       "§bお互いのターン終了時 / 相手プレイヤーに2ダメージを与える。",
       "§b何体いてもダメージは重ならない。"
@@ -370,7 +370,7 @@ export const cardList = [
     name:["minecraft:enchanted_golden_apple"],
     type: "item",
     attribute: "アイテム",
-    Cact: "25",
+    Cact: "20",
     text: [
       "§b使用時 / 自分のHP上限を40にし、",
       "§b自分のHPを全回復する。"
@@ -593,10 +593,11 @@ export const cardList = [
     attribute: "なし",
     hp: "4",
     atk: "0",
-    Sact: "2",
+    Sact: "1",
     Bact: "21",
     text: [
-      "§bターン経過時効果 / 卵を獲得"
+      "§bこのカードはオーバーコストして召喚することができない。",
+      "§b召喚時効果 / 卵を1つ入手"
     ]
   },
   {
@@ -605,7 +606,7 @@ export const cardList = [
     attribute: "浮遊",
     hp: "6",
     atk: "0",
-    Sact: "4",
+    Sact: "3",
     Bact: "5",
     text: [
       "§b召喚時効果 / 草ブロックを2つ入手する。",
@@ -669,7 +670,7 @@ export const cardList = [
     attribute: "なし",
     hp: "82",
     atk: "15",
-    Sact: "30",
+    Sact: "20",
     Bact: "14",
     text: [
       "§b除外無効",
