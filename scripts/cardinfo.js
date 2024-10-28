@@ -27,7 +27,7 @@ export const cardList = [
   {
     name: ["minecraft:chest"],
     type: "item",
-    attribute: "アイテム",
+    attribute: "アイテム・オブジェクト",
     Cact: "3",
     text: [
       "§b使用時 / 「木の剣、木のツルハシ、ニンジン付きの棒」を獲得する。",
@@ -147,7 +147,7 @@ export const cardList = [
   {
     name:["minecraft:mob_spawner"],
     type: "item",
-    attribute: "アイテム",
+    attribute: "アイテム・オブジェクト",
     Cact: "8",
     text: [
       "§b使用時 / 「ハスク」、「ストレイ」、「洞窟グモ」を獲得する。",
@@ -180,7 +180,7 @@ export const cardList = [
   {
     name:["minecraft:ender_chest"],
     type: "item",
-    attribute: "アイテム",
+    attribute: "アイテム・オブジェクト",
     Cact: "25",
     text: [
       "§b使用時 / 相手モブ全員に10ダメージを与え、次のカードからランダムで獲得する。",
@@ -619,7 +619,7 @@ export const cardList = [
   {
     name:["minecraft:bee_nest"],
     type: "item",
-    attribute: "アイテム",
+    attribute: "アイテム・オブジェクト",
     Cact: "3",
     text: [
       "§b使用時 / 「ハチのスポーンエッグ」を2枚手札に加える。",
@@ -633,7 +633,7 @@ export const cardList = [
   {
     name:["minecraft:composter"],
     type: "item",
-    attribute: "アイテム",
+    attribute: "アイテム・オブジェクト",
     Cact: "3",
     text: [
       "§b使用時 / 「木のツルハシ」と「木のクワ」、「ニンジン付きの棒」を1枚ずつ入手する。",

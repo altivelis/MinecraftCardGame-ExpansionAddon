@@ -5,12 +5,18 @@ mc.system.runInterval(() => {
   let players = mc.world.getPlayers();
   players.forEach(player => {
     //見ているモブの情報表示
-    const target = player.getEntitiesFromViewDirection({maxDistance:32, ignoreBlockCollision:true, 
+    const target = player.getEntitiesFromViewDirection({maxDistance:64, ignoreBlockCollision:true, 
       excludeTypes:["minecraft:item"]
     })[0]?.entity;
     if(target){
       const hp = target.getComponent(mc.EntityHealthComponent.componentId);
       player.onScreenDisplay.setActionBar([(target.typeId == "minecraft:player")?target.nameTag:{translate: `entity.${target.typeId.slice(10)}.name`}, ` ${Math.floor(hp.currentValue*10)/10}/${Math.floor(hp.defaultValue*10)/10}\n`, cardInfo(target.typeId).join("\n")]);
+    }
+    else{
+      const block = player.getBlockFromViewDirection({excludeTypes:["minecraft:barrier"], maxDistance:64})?.block;
+      if(cardList.some((e)=>{return e.name.includes(block.typeId) && e.attribute.includes("オブジェクト")})){
+        player.onScreenDisplay.setActionBar([{translate: `tile.${block.typeId.slice(10)}.name`}, "\n", cardInfo(block.typeId).join("\n")]);
+      }
     }
 
     //アイテムに説明を表示
