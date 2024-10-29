@@ -13,9 +13,13 @@ mc.system.runInterval(() => {
       player.onScreenDisplay.setActionBar([(target.typeId == "minecraft:player")?target.nameTag:{translate: `entity.${target.typeId.slice(10)}.name`}, ` ${Math.floor(hp.currentValue*10)/10}/${Math.floor(hp.defaultValue*10)/10}\n`, cardInfo(target.typeId).join("\n")]);
     }
     else{
+      //見ているブロックの情報表示
       const block = player.getBlockFromViewDirection({excludeTypes:["minecraft:barrier"], maxDistance:64})?.block;
-      if(cardList.some((e)=>{return e.name.includes(block.typeId) && e.attribute.includes("オブジェクト")})){
+      if(cardList.some((e)=>e.name.includes(block.typeId) && e.attribute.includes("オブジェクト"))){
         player.onScreenDisplay.setActionBar([{translate: `tile.${block.typeId.slice(10)}.name`}, "\n", cardInfo(block.typeId).join("\n")]);
+      }
+      else if(cardList.some((e)=>e.name.includes(block.typeId) && block.typeId.includes("wool"))){
+        player.onScreenDisplay.setActionBar([{translate: `tile.wool.${block.typeId.slice(10, -5)}.name`}, "\n", cardInfo(block.typeId).join("\n")]);
       }
     }
 
@@ -28,7 +32,7 @@ mc.system.runInterval(() => {
       const item = inv.getItem(i);
       if(!item) continue;
       if(item.getLore().length > 0) continue;
-      if(!cardList.find((element) => element.name.includes(item.typeId))) continue;
+      if(!cardList.some((e) => e.name.includes(item.typeId))) continue;
       let remove = false;
       for(let j=0; j<inv.size; j++){
         /**
@@ -50,6 +54,7 @@ mc.system.runInterval(() => {
           inv.setItem(j, item2);
           inv.setItem(i);
           remove = true;
+          break;
         }
       }
       if(remove) continue;
